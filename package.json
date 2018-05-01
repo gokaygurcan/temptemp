@@ -1,0 +1,27 @@
+{
+  "name": "ng2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "flow": "flow"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^0.1.2",
+    "next": "^6.0.0",
+    "node-sass": "^4.9.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-helmet": "^5.2.0",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-flow-strip-types": "^7.0.0-beta.46",
+    "babel-eslint": "^8.2.3",
+    "flow-bin": "^0.71.0"
+  }
+}

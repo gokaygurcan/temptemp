@@ -1,0 +1,123 @@
+yarn run v1.6.0
+$ flow
+Error ------------------------------------------------------------------------------- components/Counter/Counter.js:5:35
+
+Cannot resolve module `semantic-ui-react`.
+
+   5| import { Button, Container } from 'semantic-ui-react';
+                                        ^^^^^^^^^^^^^^^^^^^
+
+
+Error ------------------------------------------------------------------------------- components/Counter/Counter.js:11:9
+
+Cannot assign object literal to `this.state` because property `state` is missing in uninitialized this (expected super
+constructor call) [1].
+
+   components/Counter/Counter.js:11:9
+   11|         this.state = {
+               ^^^^^^^^^^
+
+References:
+   components/Counter/Counter.js:9:7
+    9| class Counter extends Component<Props> {
+             ^^^^^^^ [1]
+
+
+Error ------------------------------------------------------------------------------ components/Counter/Counter.js:17:23
+
+Cannot call `this.setState` with object literal bound to `partialState` because property `count` is missing in object
+literal [1] but exists in undefined [2].
+
+   components/Counter/Counter.js:17:23
+                             v
+   17|         this.setState({
+   18|             count: this.state.count + 1
+   19|         });
+               ^ [1]
+
+References:
+   ../../AppData/Local/Temp/flow/flowlib_3adb1a53/react.js:26:46
+   26| declare class React$Component<Props, State = void> {
+                                                    ^^^^ [2]
+
+
+Error ------------------------------------------------------------------------------ components/Counter/Counter.js:18:20
+
+Cannot get `this.state.count` because property `count` is missing in undefined [1].
+
+   components/Counter/Counter.js:18:20
+   18|             count: this.state.count + 1
+                          ^^^^^^^^^^^^^^^^
+
+References:
+   ../../AppData/Local/Temp/flow/flowlib_3adb1a53/react.js:26:46
+   26| declare class React$Component<Props, State = void> {
+                                                    ^^^^ [1]
+
+
+Error ------------------------------------------------------------------------------ components/Counter/Counter.js:26:45
+
+Cannot get `this.state.count` because property `count` is missing in undefined [1].
+
+   components/Counter/Counter.js:26:45
+   26|                 <Container as='p' content={ this.state.count } />
+                                                   ^^^^^^^^^^^^^^^^
+
+References:
+   ../../AppData/Local/Temp/flow/flowlib_3adb1a53/react.js:26:46
+   26| declare class React$Component<Props, State = void> {
+                                                    ^^^^ [1]
+
+
+Error ----------------------------------------------------------------------------------- components/Hello/Hello.js:5:24
+
+Cannot resolve module `semantic-ui-react`.
+
+   5| import { Header } from 'semantic-ui-react';
+                             ^^^^^^^^^^^^^^^^^^^
+
+
+Error ---------------------------------------------------------------------------------- components/Hello/Hello.js:12:17
+
+Missing type annotation for `props`.
+
+   12|     constructor(props) {
+                       ^^^^^
+
+
+Error ---------------------------------------------------------------------------------------------- pages/index.js:4:25
+
+Cannot resolve module `semantic-ui-react`.
+
+   4| import { Divider } from 'semantic-ui-react';
+                              ^^^^^^^^^^^^^^^^^^^
+
+
+Error ---------------------------------------------------------------------------------------------- pages/index.js:9:19
+
+Cannot use `Component` [1] with less than 1 type argument.
+
+   pages/index.js:9:19
+    9| class App extends Component {
+                         ^^^^^^^^^
+
+References:
+   ../../AppData/Local/Temp/flow/flowlib_3adb1a53/react.js:26:31
+   26| declare class React$Component<Props, State = void> {
+                                     ^^^^^^^^^^^^ [1]
+
+
+Error --------------------------------------------------------------------------------------------- pages/index.js:10:17
+
+Missing type annotation for `props`.
+
+   10|     constructor(props) {
+                       ^^^^^
+
+
+
+Found 10 errors
+
+Only showing the most relevant union/intersection branches.
+To see all branches, re-run Flow with --show-all-branches
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
